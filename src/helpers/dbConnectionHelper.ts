@@ -5,3 +5,9 @@ export const sequelizeConnection = new Sequelize('dev', 'dbadmin', '^2C!Yi4HP^*5
   host: 'shush-dev.cluster-c4c2sa6jb2rt.eu-west-2.rds.amazonaws.com',
   dialect: 'postgres' 
 });
+
+
+export const connectToDb = async() => {
+  await sequelizeConnection.authenticate();
+  console.log('Connection has been established successfully.');
+}
