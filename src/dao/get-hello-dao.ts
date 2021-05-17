@@ -1,4 +1,5 @@
 import { connectToDb, sequelizeConnection } from "src/helpers/dbConnectionHelper";
+import { User } from "src/interfaces/user";
 
 
 export const helloData  = async (): Promise<any> => {
@@ -7,10 +8,10 @@ export const helloData  = async (): Promise<any> => {
  
 }
 
-export const helloDatasMocks  = async (): Promise<any> => {
+export const helloDatasMocks  = async (): Promise<User> => {
     return new Promise((resolve, reject) => {
         try {
-        resolve('data');
+        resolve({name:'venki', age:12});
         }catch(ex) {
             reject(ex);
         }
