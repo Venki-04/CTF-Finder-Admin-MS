@@ -1,6 +1,6 @@
 import type { AWS } from '@serverless/typescript';
 import hello from '@functions/hello';
-import helloGet from '@functions/helloget';
+import gethello from '@functions/gethello';
 
 const serverlessConfiguration: AWS = {
   service: 'ctf-fnder-admin-ms',
@@ -25,7 +25,7 @@ const serverlessConfiguration: AWS = {
     lambdaHashingVersion: '20201221',
   },
   // import the function via paths
-  functions: { hello, helloGet },
+  functions: { hello, gethello },
 };
 
 module.exports = serverlessConfiguration;

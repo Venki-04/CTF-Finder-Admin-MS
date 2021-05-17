@@ -1,7 +1,6 @@
 import 'source-map-support/register';
 import { formatJSONResponse } from '@libs/apiGateway';
 import { middyfy } from '@libs/lambda';
-import { APIGatewayProxyHandler } from 'aws-lambda';
 
 // import schema from './schema';
 
