@@ -1,2 +1,2 @@
 export { default as hello } from './hello';
-// export { default as helloget } from './helloget';
+export { default as helloget } from './helloget';
