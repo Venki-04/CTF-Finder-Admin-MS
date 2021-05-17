@@ -8,6 +8,11 @@ export const sequelizeConnection = new Sequelize('dev', 'dbadmin', '^2C!Yi4HP^*5
 
 
 export const connectToDb = async() => {
+  try {
   await sequelizeConnection.authenticate();
   console.log('Connection has been established successfully.');
+  }
+  catch (ex) {
+    console.log('error at connecting to DB');
+  }
 }
